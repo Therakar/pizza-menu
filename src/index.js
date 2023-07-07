@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client"; // in react version < 18 is "react-dom" without '/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return <h1>Hello React!!!!!</h1>;
+}
+
+// React version < 18
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+// React version >= 18
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App />);
+
+/* But I want to activate strict mode, so instead of directly 
+rendering <App/> as a root component I'll wrap it into a Strict Mode component */
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
