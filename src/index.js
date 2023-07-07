@@ -61,7 +61,15 @@ function Header() {
 }
 
 function Main() {
-  return <h2>Our Menu</h2>;
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+    </div>
+  );
 }
 
 function Footer() {
