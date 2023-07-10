@@ -74,12 +74,21 @@ function Menu() {
       <h2>Our Menu</h2>
 
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        // fragment
+        <>
+          <p>
+            Authentic Italian cusine. {numPizzas} creative dishes to chose from.
+            All from our stone oven, all organic, all delicious.
+          </p>
+
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObj={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
       ) : (
+        // /fragment
         <p>We're still workong on our menu. Please come back later ;)</p>
       )}
 
